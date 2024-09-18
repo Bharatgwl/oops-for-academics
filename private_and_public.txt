@@ -1,0 +1,8 @@
+1. public Access Specifier:
+->Members declared as public can be accessed from anywhere in the program (inside and outside the class).
+->It is typically used when you want to allow access to certain data or methods without restriction
+2. private Access Specifier:
+->Members declared as private can only be accessed within the class itself.
+->They cannot be accessed directly from outside the class. 
+->To access them, you need to provide public getter/setter methods or other public interfaces.
+->private ensures encapsulation, meaning the internal data is hidden from external access and manipulation.
