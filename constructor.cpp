@@ -24,10 +24,10 @@ A constructor is a special member function in C++ that is automatically called w
 
 Key characteristics of constructors:
 
-Same name as the class: A constructor always has the same name as the class.
-No return type: Constructors do not have a return type, not even void.
-Called automatically: When an object is created, the constructor is invoked automatically, so you don't need to call it explicitly.
-Types of constructors:
-Default constructor: Takes no parameters and provides default initialization.
-Parameterized constructor: Takes arguments to initialize object members with specific values.
-Copy constructor: Initializes an object using another object of the same class.*/
+1.Same name as the class: A constructor always has the same name as the class.
+2.No return type: Constructors do not have a return type, not even void.
+3.Called automatically: When an object is created, the constructor is invoked automatically, so you don't need to call it explicitly.
+4.Types of constructors:
+5.Default constructor: Takes no parameters and provides default initialization.
+6.Parameterized constructor: Takes arguments to initialize object members with specific values.
+7.Copy constructor: Initializes an object using another object of the same class.*/
