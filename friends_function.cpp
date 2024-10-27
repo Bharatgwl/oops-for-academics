@@ -11,25 +11,32 @@ A friend class can access all private and protected members of the class that de
 #include <iostream>
 using namespace std;
 
-class MyClass {
+class MyClass
+{
 private:
     int num1, num2;
 
 public:
-    MyClass(int x, int y) : num1(x), num2(y) {}  // Constructor to initialize values
+    MyClass(int x, int y)
+    {
+        this->num1 = x;
+        this->num2 = y;
+    } // Constructor to initialize values
 
     // Declare the friend function
     friend int sum(MyClass obj);
 };
 
 // Definition of friend function
-int sum(MyClass obj) {
+int sum(MyClass obj)
+{
     // Access private members directly
     return obj.num1 + obj.num2;
 }
 
-int main() {
-    MyClass obj(10, 20);  // Create an object of MyClass
-    cout << "Sum: " << sum(obj) << endl;  // Call the friend function
+int main()
+{
+    MyClass obj(10, 20);    // Create an object of MyClass
+    cout << "Sum: " << sum(obj) << endl; // Call the friend function
     return 0;
 }

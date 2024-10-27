@@ -15,9 +15,18 @@ public:
     {
         cout << real + obj.real << "+" << img + obj.img << "i" << endl;
     }
+    void operator*(complex &obj)
+    {
+        // double newReal = (real * obj.real) - (img * obj.img);
+        // double newimg = (real * obj.img) + (img * obj.real);
+        // cout << newReal << "+" << newimg << "i" << endl;
+        cout << (real * obj.real) - (img * obj.img) << "+" << (real * obj.img) + (img * obj.real)<<"i";
+    }
 };
 int main()
 {
-    complex c1(2, 5), c2(4, 5);
+    complex c1(3, 2);
+    complex c2(1, 7);
     c1 + c2;
+    c1 *c2;
 }
