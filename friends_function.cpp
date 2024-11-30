@@ -24,7 +24,7 @@ public:
     } // Constructor to initialize values
 
     // Declare the friend function
-    friend int sum(MyClass obj);
+    friend int sum(MyClass obj);//it always takes a object as parameter
 };
 
 // Definition of friend function

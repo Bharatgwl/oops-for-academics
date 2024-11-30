@@ -1,0 +1,48 @@
+Encapsulation is the concept of wrapping data (variables) and methods (functions) that operate on the data into a single unit, known as a class. It restricts direct access to some of the object's components, which can prevent the accidental modification of data. Encapsulation is achieved using access modifiers like private, protected, and public.
+
+Example: Consider a bank account. The balance of the account should not be directly accessible or modifiable from outside the class. Instead, methods like deposit and withdraw should be used to modify the balance.
+
+java
+class BankAccount {
+    private double balance;
+
+    public BankAccount(double initialBalance) {
+        balance = initialBalance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+Differences between Abstraction and Encapsulation
+Purpose:
+
+Abstraction focuses on hiding the complexity of the system by exposing only the necessary parts.
+
+Encapsulation focuses on bundling the data and methods that operate on the data into a single unit and restricting access to some of the object's components.
+
+Implementation:
+
+Abstraction is implemented using abstract classes and interfaces.
+
+Encapsulation is implemented using access modifiers (private, protected, public).
+
+Usage:
+
+Abstraction is used to reduce complexity and increase efficiency by hiding unnecessary details.
+
+Encapsulation is used to protect the data from unauthorized access and modification.
+
+I hope this helps clarify the concepts! If you have any more questions or need further examples, feel free to ask.

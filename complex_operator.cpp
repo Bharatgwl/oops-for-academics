@@ -13,6 +13,8 @@ public:
     }
     void operator+(complex &obj)
     {
+        cout<<real<<endl;
+        cout<<img<<endl;
         cout << real + obj.real << "+" << img + obj.img << "i" << endl;
     }
     void operator*(complex &obj)

@@ -1,0 +1,16 @@
+Abstraction
+Abstraction is the concept of hiding the complex implementation 
+details and showing only the essential features of an object.
+ It helps in reducing programming complexity and effort. 
+ By using abstraction, a programmer can focus on what an object
+  does instead of how it does it.
+
+Example: Consider a car. When you drive a car, 
+you interact with its steering wheel, pedals, and gear shift.
+ You don't need to understand the complex mechanics of the engine,
+  transmission, or braking system.
+ The car's interface (steering wheel, pedals, etc.) 
+ abstracts the complex details of its internal workings.
+
+In programming, abstraction can be achieved using abstract 
+classes and interfaces.

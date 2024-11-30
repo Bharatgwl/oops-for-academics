@@ -1,90 +1,55 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 class stack
 {
-public:
+private:
     int size;
     int *arr;
     int top;
+
+public:
     stack(int size)
     {
         this->size = size;
-        arr = new int(size);
-        top = -1;
+        this->arr = new int(size);
+        this->top = -1;
     }
-    void push(int element)
+    void push(int data)
     {
-        if (size - top > 1)
+        if (top == size - 1)
         {
-            top++;
-            arr[top] = element;
-        }
-        else
-        {
-            cout << "Caused Stack Overflow" << endl;
+            cout << "Stack overflow" << endl;
             return;
         }
+        top++;
+        arr[top] = data;
     }
-    int pop()
+    void pop()
     {
-        if (top >= 0)
+        if (top == -1)
         {
-            return arr[top];
-            top--;
+            cout << "stack underflow" << endl;
+            return;
         }
-        else
-        {
-
-            return -1;
-        }
+        arr[top--];
     }
-
     int peek()
     {
-        if (top >= 0)
+        if (top == -1)
         {
-            return arr[top];
-        }
-        else
-        {
+            cout << "stack is empty" << endl;
             return -1;
         }
+        return this->arr[this->top];
     }
 };
-
 int main()
 {
     stack *st = new stack(5);
-    int arr[5] = {1, 2, -1, -1, 2};
-    vector<int> ans;
-    for (int i = 0; i < 5; i++)
-    {
-        if (arr[i] < 0)
-        {
-            int save = st->pop();
-            ans.push_back(save);
-        }
-        else if (arr[i] == 0)
-        {
-            ans.push_back(st->peek());
-        }
-        else
-        {
-            st->push(arr[i]);
-        }
-    }
-    for (int i = 0; i < ans.size(); i++)
-    {
-        if (ans[i] == -1)
-
-        {
-
-            cout << "se";
-        }
-        else
-        {
-            cout << ans[i];
-        }
-    }
+    st->push(1);
+    st->push(1);
+    st->push(1);
+    st->push(1);
+    st->push(1);
+    cout<< st->peek();
 }

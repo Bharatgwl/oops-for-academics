@@ -1,8 +1,60 @@
-1. public Access Specifier:
-->Members declared as public can be accessed from anywhere in the program (inside and outside the class).
-->It is typically used when you want to allow access to certain data or methods without restriction
-2. private Access Specifier:
-->Members declared as private can only be accessed within the class itself.
-->They cannot be accessed directly from outside the class. 
-->To access them, you need to provide public getter/setter methods or other public interfaces.
-->private ensures encapsulation, meaning the internal data is hidden from external access and manipulation.
+private public and protrectes
+Let's break down the three access specifiers in C++: private, public, and protected.
+
+Private
+Access: Members declared as private are accessible only within the same class. They cannot be accessed directly from outside the class.
+
+Usage: Private members are used to encapsulate data and hide implementation details from the outside world.
+
+Example:
+
+cpp
+class MyClass {
+private:
+    int privateVar;
+public:
+    void setPrivateVar(int value) {
+        privateVar = value;
+    }
+};
+Public
+Access: Members declared as public are accessible from anywhere in the program. They can be accessed directly from outside the class.
+
+Usage: Public members are used to define the interface of the class, allowing interaction with the class's objects.
+
+Example:
+
+cpp
+class MyClass {
+public:
+    int publicVar;
+};
+Protected
+Access: Members declared as protected are accessible within the same class and its derived classes. They cannot be accessed directly from outside the class.
+
+Usage: Protected members are used to allow derived classes to access and modify the base class's data while still restricting access from outside the class hierarchy.
+
+Example:
+
+cpp
+class BaseClass {
+protected:
+    int protectedVar;
+};
+
+class DerivedClass : public BaseClass {
+public:
+    void setProtectedVar(int value) {
+        protectedVar = value;
+    }
+};
+Summary
+Private: Accessible only within the class.
+
+Public: Accessible from anywhere.
+
+Protected: Accessible within the class and its derived classes.
+
+These access specifiers help in implementing encapsulation and controlling the visibility of class members, ensuring that the internal state of an object is protected from unintended interference.
+
+If you have any more questions or need further clarification, feel free to ask!

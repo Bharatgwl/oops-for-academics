@@ -30,6 +30,6 @@ int main()
     car *mercedes = new car();
     mercedes->input("Amg g63", "2024", 40000000);
     mercedes->display();
-    double disc = mercedes->discount(1.76);
+    long long disc = mercedes->discount(1.76);
     cout << "Your Car Price After Discount is: " << disc << endl;
 }
